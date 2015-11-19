@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include header.html %}
+  </head>
+  <body>
+    {% include nav/main.html %}
+
+    <div class="advcal-header">
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.lead }}</p>
+      </div>
+    </div>
+
+    <div class="container advcal-container">
+      <div class="row">
+        <div class="col-md-{% if page.fullwidth == true %}12{% else %}9{% endif %}" role="main">
+          {{ content }}
+        </div>
+
+        <div class="col-md-3">
+          <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+            <ul class="nav bs-docs-sidenav">
+              {% include nav/articles.html %}
+            </ul>
+            <a class="back-to-top" href="#top">
+              Back to top
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

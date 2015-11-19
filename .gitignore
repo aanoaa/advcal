@@ -1,3 +1,6 @@
 # Folders to ignore
 _gh_pages/
 node_modules/
+
+# Files to ignore
+*.min.js
