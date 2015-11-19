@@ -48,6 +48,27 @@ module.exports = function(grunt) {
         src: ['docs/assets/js/src/**/*.js'],
         dest: 'docs/assets/js/docs.min.js'
       }
+    },
+    cssmin: {
+      options: {
+        compatibility: 'ie8',
+        keepSpecialComments: '*',
+        sourceMap: true,
+        advanced: false
+      },
+      docs: {
+        src: ['docs/assets/css/src/**/*.css'],
+        dest: 'docs/assets/css/docs.min.css'
+      }
+    },
+    csscomb: {
+      options: {
+        config: '.csscomb.json'
+      },
+      docs: {
+        src: 'docs/assets/css/src/docs.css',
+        dest: 'docs/assets/css/src/docs.css'
+      }
     }
   });
   require('load-grunt-tasks')(grunt, {
@@ -55,7 +76,9 @@ module.exports = function(grunt) {
   });
   require('time-grunt')(grunt);
   // Task for docs
-  grunt.registerTask('docs', ['jshint:docs', 'uglify:docs']);
+  grunt.registerTask('docs-js', ['jshint:docs', 'uglify:docs']);
+  grunt.registerTask('docs-css', ['csscomb:docs', 'cssmin:docs']);
+  grunt.registerTask('docs', ['docs-js', 'docs-css']);
 
   grunt.registerTask('default', ['docs', 'jekyll:github', 'htmlmin']);
 };
