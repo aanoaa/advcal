@@ -6,6 +6,7 @@ module.exports = function(grunt) {
       options: {
         config: '_config.yml'
       },
+      docs: {},
       github: {
         options: {
           raw: 'github: true'
@@ -68,6 +69,12 @@ module.exports = function(grunt) {
       docs: {
         src: 'docs/assets/css/src/docs.css',
         dest: 'docs/assets/css/src/docs.css'
+      }
+    },
+    watch: {
+      docs: {
+        files: ['docs/assets/css/src/docs.css', 'docs/assets/js/src/docs.js'],
+        tasks: ['docs-js', 'cssmin:docs']
       }
     }
   });
