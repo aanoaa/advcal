@@ -14,6 +14,7 @@ encoding:         UTF-8
 
 # Custom vars
 current_version:  0.0.1
+base_url:         advcal
 repo:             https://github.com/aanoaa/advcal
 
 cdn:

@@ -11,4 +11,4 @@
 # Run #
 
     $ grunt
-    $ bundle exec jekyll serve    # http://localhost:5000/
+    $ bundle exec jekyll serve --baseurl '/advcal'    # http://localhost:5000/advcal/
