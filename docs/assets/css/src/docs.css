@@ -17,7 +17,7 @@
   border-bottom: 0;
 }
 .advcal-home td a {
-    display: block;
+  display: block;
 }
 
 /* By default it's not affixed in mobile views, so undo that */
