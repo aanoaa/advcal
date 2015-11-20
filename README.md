@@ -1,10 +1,10 @@
 # Requirements #
 
-    # once
+    # execute once
     $ npm install -g grunt-cli
     $ gem install bundler
 
-    # occasionally after `git pull`
+    # execute often after `git pull`
     $ npm install
     $ bundle install
 
