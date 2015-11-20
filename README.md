@@ -21,3 +21,29 @@ Add `docs/2015-12-xx.md` and edit `docs/index.html`
 -        <td><a href="2015-12-xx/">xx</a></td>
 +        <td class="success"><a href="2015-12-xx/">xx</a></td>
 ```
+
+## Highlight ##
+
+https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+
+`docs/2015-12-xx.md`
+
+    {% highlight html %}
+    <div>
+      <span>...</span>
+    </div>
+    {% endhighlight %}
+
+    {% highlight javascript %}
+    function() {
+      console.log('...');
+    }
+    {% endhighlight %}
+
+    {% highlight perl %}
+    use strict;
+    use warnings;
+
+    my $debug = 1;
+    print "hello" if $debug;
+    {% endhighlight %}
