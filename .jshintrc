@@ -12,5 +12,5 @@
   "strict"   : false,
   "undef"    : true,
   "unused"   : true,
-  "predef"   : [ "anchors" ]
+  "predef"   : [ "anchors", "console" ]
 }
